@@ -1,0 +1,12 @@
+[user]
+	name = Brett Tanner
+	email = bretttanner171@gmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	editor = nvim
+	excludesfile = /Users/brett/.gitignore_global
+[alias]
+	ac = !git add -A && git commit -m
