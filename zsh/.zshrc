@@ -70,7 +70,7 @@ ZSH_CUSTOM=$HOME/brett-zsh-custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(rails zsh-autosuggestions)
+plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,7 +103,6 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-eval "$(rbenv init - zsh)" # This loads rbenv
 alias chrome="open -a 'Google Chrome'"
 alias firefox="open -a 'Firefox'"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
@@ -111,9 +110,6 @@ export DATABASE_PASSWORD="postgrespass"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# Created by `pipx` on 2023-03-07 04:16:29
-export PATH="$PATH:/Users/brett/.local/bin"
 
 # Use Homebrew's OpenSSL for Ruby
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
@@ -124,6 +120,7 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(direnv hook zsh)"
+eval "$(rbenv init - zsh)" # This loads rbenv
 
 export TERM=xterm-256color
 
