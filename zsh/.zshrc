@@ -100,28 +100,46 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if [[ $(uname) == "Darwin" ]]; then
+    export OS="macOS"
+elif command -v freebsd-version > /dev/null; then
+	export OS="FreeBSD"
+elif command -v apt > /dev/null; then
+	export OS="Linux"
+else
+    echo 'Unknown OS!'
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 alias chrome="open -a 'Google Chrome'"
 alias firefox="open -a 'Firefox'"
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+if [[ $OS == "macOS" ]]; then
+	export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+	# Use Homebrew's OpenSSL for Ruby
+	export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+fi
 export DATABASE_PASSWORD="postgrespass"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Use Homebrew's OpenSSL for Ruby
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 # bun completions
 [ -s "/Users/brett/.bun/_bun" ] && source "/Users/brett/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
 eval "$(direnv hook zsh)"
 eval "$(rbenv init - zsh)" # This loads rbenv
 
+. "$HOME/.cargo/env"
+
 export TERM=xterm-256color
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ $OS == "macOS" ]]; then
+	source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [[ $OS == "Linux" ]]; then
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
