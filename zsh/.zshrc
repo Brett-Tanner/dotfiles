@@ -141,6 +141,7 @@ export TERM=xterm-256color
 
 if [[ $OS == "macOS" ]]; then
 	source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	export PATH="$PATH:/usr/local/bin/bin"
 elif [[ $OS == "Linux" ]]; then
 	export PATH="$PATH:/opt/neovim/build/bin"
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
