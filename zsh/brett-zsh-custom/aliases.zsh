@@ -12,6 +12,7 @@ alias gs='git status'
 # Rails
 alias bd='bin/dev'
 alias rc='bundle exec rails console'
+alias reb='bundle exec rails eb:deploy'
 alias rdm='bundle exec rails db:migrate'
 alias rdrs='bundle exec rails db:reset'
 alias rgen='bundle exec rails generate'
