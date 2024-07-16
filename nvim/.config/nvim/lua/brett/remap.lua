@@ -87,3 +87,7 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git status", remap = tr
 -- tailwind-tools
 vim.keymap.set("n", "<leader>tc", vim.cmd.TailwindConcealToggle, { desc = "Toggle tailwind concealer", remap = true })
 vim.keymap.set("n", "<leader>ts", vim.cmd.TailwindSort, { desc = "Sort tailwind classes", remap = true })
+
+-- spelunker
+vim.keymap.set("n", "[s", "<Plug>(spelunker-jump-prev)", { desc = "Previous misspelled word", remap = true })
+vim.keymap.set("n", "]s", "<Plug>(spelunker-jump-next)", { desc = "Next misspelled word", remap = true })

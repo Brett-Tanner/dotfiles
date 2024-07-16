@@ -23,7 +23,7 @@ return {
 	},
 	{ "neovim/nvim-lspconfig" },
 	{ "nvim-telescope/telescope.nvim" },
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	{ "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" },
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "williamboman/mason.nvim" },
 	{
@@ -65,14 +65,14 @@ return {
 		},
 	},
 	{ "Bilal2453/luvit-meta", lazy = true }, -- optional `vim.uv` typings
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "catppuccin/nvim",      name = "catppuccin", priority = 1000 },
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
 		opts = {},
 	},
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{ "rose-pine/neovim",     name = "rose-pine" },
 	{
 		"sainnhe/gruvbox-material",
 		lazy = false,
@@ -107,4 +107,5 @@ return {
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		opts = {},
 	},
+	{ "kamykn/spelunker.vim" },
 }
