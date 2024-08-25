@@ -1,7 +1,15 @@
 local lsp_zero = require("lsp-zero")
+local lsp_attach = function(client, bufnr)
+	-- see :help lsp-zero-keybindings
+	-- to learn the available actions
+	lsp_zero.default_keymaps({ buffer = bufnr })
+end
+lsp_zero.extend_lspconfig({
+	sign_text = true,
+	lsp_attach = lsp_attach,
+	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+})
 local lspconfig = require("lspconfig")
-
-lsp_zero.on_attach(function() end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
@@ -15,7 +23,6 @@ require("mason-lspconfig").setup({
 		"gopls",
 		"rubocop",
 		"stimulus_ls",
-		"tailwindcss",
 		"tsserver",
 	},
 	flags = {
@@ -23,7 +30,6 @@ require("mason-lspconfig").setup({
 		debounce_text_changes = 150,
 	},
 	handlers = {
-		lsp_zero.default_setup,
 		lspconfig.biome.setup({
 			root_dir = lspconfig.util.root_pattern("biome.json", "biome.jsonc", ".git"),
 		}),
@@ -64,7 +70,6 @@ require("mason-lspconfig").setup({
 		}),
 		lspconfig.marksman.setup({}),
 		lspconfig.gopls.setup({}),
-		lspconfig.pyright.setup({}),
 		lspconfig.rubocop.setup({
 			command = { "rbenv", "exec", "rubocop", "--lsp" },
 		}),
@@ -78,34 +83,25 @@ require("mason-lspconfig").setup({
 			},
 		}),
 		lspconfig.stimulus_ls.setup({}),
-		lspconfig.tailwindcss.setup({
-			experimental = {
-				classRegex = {
-					"%\\w+([^\\s]*)",
-					"\\.([^\\.]*)",
-					':class\\s*=>\\s*"([^"]*)',
-					'class:\\s+"([^"]*)',
-				},
-			},
-		}),
 		lspconfig.tsserver.setup({}),
 	},
 })
 
 local cmp = require("cmp")
-require("lsp-zero").cmp_action()
 
 cmp.setup({
 	sources = {
+		{ name = "lazydev", group_index = 0 },
 		{ name = "nvim_lsp" },
-		{ name = "buffer" },
+	},
+	snippet = {
+		expand = function(args)
+			-- You need Neovim v0.10 to use vim.snippet
+			vim.snippet.expand(args.body)
+		end,
 	},
 	mapping = cmp.mapping.preset.insert({
-		-- `Enter` key to confirm completion
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
-
-		-- Ctrl+Space to trigger completion menu
-		["<C-Space>"] = cmp.mapping.complete(),
 	}),
 })
 
@@ -135,7 +131,6 @@ null_ls.setup({
 		end
 	end,
 	sources = {
-		null_ls.builtins.diagnostics.djlint,
 		null_ls.builtins.diagnostics.haml_lint.with({
 			env = { RUBYOPT = "-W0" },
 			command = {
@@ -157,8 +152,6 @@ null_ls.setup({
 		}),
 		null_ls.builtins.diagnostics.rubocop,
 		null_ls.builtins.formatting.biome,
-		null_ls.builtins.formatting.black,
-		null_ls.builtins.formatting.djlint,
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports,
 		null_ls.builtins.formatting.goimports_reviser,
