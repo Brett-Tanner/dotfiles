@@ -85,10 +85,5 @@ return {
 		end,
 	},
 	{ "Mofiqul/dracula.nvim" },
-	{
-		"luckasRanarison/tailwind-tools.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		opts = {},
-	},
 	{ "kamykn/spelunker.vim" },
 }

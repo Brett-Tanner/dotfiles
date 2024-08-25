@@ -82,6 +82,7 @@ require("mason-lspconfig").setup({
 			},
 		}),
 		lspconfig.stimulus_ls.setup({}),
+		lspconfig.tailwindcss.setup({}),
 		lspconfig.tsserver.setup({}),
 	},
 })
