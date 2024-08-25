@@ -29,6 +29,9 @@ require("mason-lspconfig").setup({
 		debounce_text_changes = 150,
 	},
 	handlers = {
+		function(server_name)
+			lspconfig[server_name].setup({})
+		end,
 		lspconfig.biome.setup({
 			root_dir = lspconfig.util.root_pattern("biome.json", "biome.jsonc", ".git"),
 		}),
@@ -67,8 +70,6 @@ require("mason-lspconfig").setup({
 				},
 			},
 		}),
-		lspconfig.marksman.setup({}),
-		lspconfig.gopls.setup({}),
 		lspconfig.rubocop.setup({
 			command = { "rbenv", "exec", "rubocop", "--lsp" },
 		}),
@@ -81,8 +82,5 @@ require("mason-lspconfig").setup({
 				},
 			},
 		}),
-		lspconfig.stimulus_ls.setup({}),
-		lspconfig.tailwindcss.setup({}),
-		lspconfig.tsserver.setup({}),
 	},
 })
