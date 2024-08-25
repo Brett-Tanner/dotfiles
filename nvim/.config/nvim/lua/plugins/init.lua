@@ -13,7 +13,7 @@ return {
 	"tpope/vim-bundler",
 	{ "BurntSushi/ripgrep" },
 	{ "L3MON4D3/LuaSnip" },
-	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
+	{ "VonHeikemen/lsp-zero.nvim", branch = "v4.x" },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/nvim-cmp" },
 	{
