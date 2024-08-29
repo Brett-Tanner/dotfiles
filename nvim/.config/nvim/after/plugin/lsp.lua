@@ -21,7 +21,6 @@ require("mason-lspconfig").setup({
 		"marksman",
 		"gopls",
 		"rubocop",
-		"stimulus_ls",
 		"tsserver",
 	},
 	flags = {
