@@ -2,6 +2,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.keymap.set("n", "<leader>pv", vim.cmd.Oil, { desc = "Exit to containing directory", remap = true })
+vim.keymap.set("n", "<leader>t", vim.cmd.tabedit, { desc = "New Tab", remap = true })
+vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose, { desc = "Close Tab", remap = true })
 vim.keymap.set("n", "<Left>", "<Nop>", { desc = "Disable left arrow", remap = true })
 vim.keymap.set("n", "<Right>", "<Nop>", { desc = "Disable right arrow", remap = true })
 vim.keymap.set("n", "<Up>", "<Nop>", { desc = "Disable up arrow", remap = true })
@@ -64,12 +66,6 @@ vim.keymap.set("n", "<leader>rg", vim.cmd.GrugFar, { desc = "Open grug-far", rem
 -- lspconfig
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Go to definition", remap = true })
 vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { desc = "Go to references", remap = true })
-vim.keymap.set(
-	"n",
-	"gt",
-	"<cmd>lua vim.lsp.buf.type_definition()<CR>",
-	{ desc = "Go to type definition", remap = true }
-)
 vim.keymap.set("n", "<leader>ar", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Rename", remap = true })
 
 -- colorschemes
