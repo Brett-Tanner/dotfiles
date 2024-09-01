@@ -86,4 +86,9 @@ return {
 	},
 	{ "Mofiqul/dracula.nvim" },
 	{ "kamykn/spelunker.vim" },
+	{
+		"xero/evangelion.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 }
