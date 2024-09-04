@@ -30,6 +30,7 @@ null_ls.setup({
 				"bundle",
 				"exec",
 				"haml-lint",
+				"--auto-correct",
 			},
 		}),
 		null_ls.builtins.diagnostics.markdownlint_cli2,
