@@ -21,7 +21,6 @@ require("mason-lspconfig").setup({
 		"marksman",
 		"gopls",
 		"rubocop",
-		"tsserver",
 	},
 	flags = {
 		allow_incremental_sync = false,
