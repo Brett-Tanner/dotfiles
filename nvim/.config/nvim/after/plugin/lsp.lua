@@ -71,14 +71,5 @@ require("mason-lspconfig").setup({
 		lspconfig.rubocop.setup({
 			command = { "rbenv", "exec", "rubocop", "--lsp" },
 		}),
-		lspconfig.rust_analyzer.setup({
-			settings = {
-				["rust-analyzer"] = {
-					checkOnSave = {
-						command = "clippy",
-					},
-				},
-			},
-		}),
 	},
 })
