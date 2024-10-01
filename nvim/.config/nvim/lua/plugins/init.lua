@@ -6,7 +6,6 @@ return {
 	"nvim-treesitter/nvim-treesitter-textobjects",
 	"nvimtools/none-ls.nvim",
 	"rebelot/kanagawa.nvim",
-	"simrat39/rust-tools.nvim",
 	"tpope/vim-fugitive",
 	"tpope/vim-surround",
 	"tpope/vim-rails",
@@ -34,7 +33,6 @@ return {
 			"antoinemadec/FixCursorHold.nvim",
 			"nvim-treesitter/nvim-treesitter",
 			"fredrikaverpil/neotest-golang",
-			"rouge8/neotest-rust",
 		},
 	},
 	{
@@ -91,4 +89,5 @@ return {
 		lazy = false,
 		priority = 1000,
 	},
+	{ "echasnovski/mini.pairs", version = "*" },
 }
