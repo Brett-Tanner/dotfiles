@@ -87,6 +87,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+export VISUAL="$EDITOR"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

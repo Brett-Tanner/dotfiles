@@ -4,3 +4,5 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Grep files", rema
 vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Find git files", remap = true })
 vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Find keymaps", remap = true })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find help tags", remap = true })
+vim.keymap.set("n", "<leader>fc", builtin.command_history, { desc = "Find help tags", remap = true })
+vim.keymap.set("n", "<leader>fs", builtin.search_history, { desc = "Find help tags", remap = true })

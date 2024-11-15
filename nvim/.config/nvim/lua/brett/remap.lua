@@ -23,7 +23,7 @@ vim.keymap.set("n", "<leader>i", vim.diagnostic.open_float, { desc = "Show line 
 
 -- Split windows
 vim.keymap.set("n", "<leader>-", "<C-W>s<C-W>j", { desc = "Split window below", remap = true })
-vim.keymap.set("n", "<leader>/", "<C-W>v<C-W>l", { desc = "Split window right", remap = true })
+vim.keymap.set("n", "<leader>|", "<C-W>v<C-W>l", { desc = "Split window right", remap = true })
 
 -- Switch windows
 vim.keymap.set("n", "<C-h>", "<C-W>h", { desc = "Switch to left window", remap = true })
