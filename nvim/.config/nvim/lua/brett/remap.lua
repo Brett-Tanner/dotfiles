@@ -97,3 +97,7 @@ end, { desc = "Load the last session", remap = true })
 vim.keymap.set("n", "<leader>qd", function()
 	require("persistence").stop()
 end, { desc = "Stop Persistence", remap = true })
+
+-- terminal
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode", remap = true })
+vim.keymap.set("t", "<C-v><Esc>", "<Esc>", { desc = "Pass <Esc> to terminal", remap = true })
