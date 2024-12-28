@@ -1,6 +1,8 @@
--- get neotest namespace (api call creates or returns namespace)
+local config = {
+	runner = "gotestsum",
+}
 require("neotest").setup({
 	adapters = {
-		require("neotest-golang"),
+		require("neotest-golang")(config),
 	},
 })

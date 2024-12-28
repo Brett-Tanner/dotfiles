@@ -19,7 +19,6 @@ function Select_random_colorscheme()
 		"catppuccin-macchiato",
 		"dracula",
 		"dracula-soft",
-		"evangelion",
 		"kanagawa-dragon",
 		"kanagawa-wave",
 		"rose-pine-main",

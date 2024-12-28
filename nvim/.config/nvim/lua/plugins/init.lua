@@ -32,7 +32,7 @@ return {
 			"nvim-lua/plenary.nvim",
 			"antoinemadec/FixCursorHold.nvim",
 			"nvim-treesitter/nvim-treesitter",
-			"fredrikaverpil/neotest-golang",
+			{ "fredrikaverpil/neotest-golang", version = "1.2.0" },
 		},
 	},
 	{
@@ -84,10 +84,19 @@ return {
 	},
 	{ "Mofiqul/dracula.nvim" },
 	{ "kamykn/spelunker.vim" },
-	{
-		"xero/evangelion.nvim",
-		lazy = false,
-		priority = 1000,
-	},
 	{ "echasnovski/mini.pairs", version = "*" },
+	{ "windwp/nvim-ts-autotag" },
+	{
+		"folke/persistence.nvim",
+		event = "BufReadPre",
+		opts = {
+			{
+				dir = vim.fn.stdpath("state") .. "/sessions/", -- directory where session files are saved
+				-- minimum number of file buffers that need to be open to save
+				-- Set to 0 to always save
+				need = 1,
+				branch = true, -- use git branch to save session
+			},
+		},
+	},
 }
