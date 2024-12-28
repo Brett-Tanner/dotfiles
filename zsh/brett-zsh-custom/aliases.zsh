@@ -1,6 +1,7 @@
 # General
 alias dot='cd ~/dotfiles && nvim .'
 alias ls='lsd -l'
+alias gcon='nvim $HOME/Library/Application\ Support/com.mitchellh.ghostty/config'
 
 # Git
 alias gac='git add -A && git commit -m'
