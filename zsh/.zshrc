@@ -147,6 +147,3 @@ elif [[ $OS == "Linux" ]]; then
 	export PATH="$PATH:/opt/neovim/build/bin"
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
-
-# activate vim mode
-bindkey -v
