@@ -23,6 +23,7 @@ vim.opt.undofile = true
 vim.opt.updatetime = 200
 vim.opt.wrap = true
 vim.opt.cmdheight = 1
+vim.opt.splitright = true
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
