@@ -119,6 +119,8 @@ if [[ $OS == "macOS" ]]; then
 	export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 	# Use Homebrew's OpenSSL for Ruby
 	export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+	# Use PostgresApp psql
+	export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 fi
 export DATABASE_PASSWORD="postgrespass"
 export PYENV_ROOT="$HOME/.pyenv"
@@ -147,3 +149,4 @@ elif [[ $OS == "Linux" ]]; then
 	export PATH="$PATH:/opt/neovim/build/bin"
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"

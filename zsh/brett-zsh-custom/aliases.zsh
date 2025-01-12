@@ -5,6 +5,7 @@ alias gcon='nvim $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
 
 # Git
 alias gac='git add -A && git commit -m'
+alias gc='git checkout'
 alias glo='git log --oneline'
 alias gp='git pull'
 alias gps='git push'

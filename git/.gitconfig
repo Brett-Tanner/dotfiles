@@ -10,3 +10,8 @@
 	excludesfile = /Users/brett/.gitignore_global
 [alias]
 	ac = !git add -A && git commit -m
+	c = !git checkout
+	lo = !git log --oneline
+	p = !git pull
+	ps = !git push
+	s = !git status
