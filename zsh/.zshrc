@@ -150,3 +150,4 @@ elif [[ $OS == "Linux" ]]; then
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PGDATA="/Users/brett/Library/Application Support/Postgres/var-16"
