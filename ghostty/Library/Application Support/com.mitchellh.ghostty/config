@@ -1,9 +1,14 @@
+theme = light:tokyonight-storm,dark:tokyonight
+
 font-family = JetBrainsMono Nerd Font
 font-size = 15
 font-synthetic-style = false
 fullscreen = true
 macos-titlebar-style = transparent
-theme = light:tokyonight-storm,dark:tokyonight
-window-padding-color = extend
-working-directory = /Users/brett/repos
+mouse-hide-while-typing = true
 quit-after-last-window-closed = true
+window-padding-balance = true
+window-padding-color = extend
+window-padding-x = 0
+window-padding-y = 0
+working-directory = /Users/brett/repos
