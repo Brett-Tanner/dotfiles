@@ -60,6 +60,7 @@ null_ls.setup({
 				"markdown.mdx",
 				"graphql",
 				"handlebars",
+				"svelte",
 			},
 		}),
 		null_ls.builtins.formatting.rubocop,
