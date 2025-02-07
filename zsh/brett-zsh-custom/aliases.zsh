@@ -23,3 +23,7 @@ alias rr='bundle exec rails routes'
 alias rrg='bundle exec rails routes --grep'
 alias rs='bundle exec rails server'
 alias rsp='bundle exec rspec'
+
+# Node
+alias npd='npm run dev'
+alias npt='npm run test'
