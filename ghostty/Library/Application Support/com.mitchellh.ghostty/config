@@ -1,5 +1,5 @@
 theme = light:tokyonight-storm,dark:tokyonight
-
+command = /opt/homebrew/bin/fish
 font-family = JetBrainsMono Nerd Font
 font-size = 15
 font-synthetic-style = false
