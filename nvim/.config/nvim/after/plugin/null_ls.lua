@@ -6,7 +6,6 @@ null_ls.setup({
 		"gofumpt",
 		"goimports",
 		"goimports-reviser",
-		"markdownlint_cli2",
 		"prettierd",
 		"revive",
 		"stylua",
@@ -32,8 +31,6 @@ null_ls.setup({
 				"haml-lint",
 			},
 		}),
-		null_ls.builtins.diagnostics.markdownlint_cli2,
-		null_ls.builtins.diagnostics.markuplint,
 		null_ls.builtins.diagnostics.revive.with({
 			args = {
 				"--config",
