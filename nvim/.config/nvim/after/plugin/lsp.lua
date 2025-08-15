@@ -30,6 +30,7 @@ require("mason-lspconfig").setup({
 		function(server_name)
 			lspconfig[server_name].setup({})
 		end,
+		lspconfig.emmet_language_server.setup({}),
 		lspconfig.biome.setup({
 			root_dir = lspconfig.util.root_pattern("biome.json", "biome.jsonc", ".git"),
 		}),
