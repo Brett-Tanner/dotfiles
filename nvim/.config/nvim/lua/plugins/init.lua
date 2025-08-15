@@ -99,9 +99,5 @@ return {
 			},
 		},
 	},
-	{
-		"OXY2DEV/markview.nvim",
-		lazy = false,
-	},
 	{ "brenoprata10/nvim-highlight-colors" },
 }
