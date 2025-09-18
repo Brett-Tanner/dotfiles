@@ -12,7 +12,6 @@ return {
 	"tpope/vim-bundler",
 	{ "BurntSushi/ripgrep" },
 	{ "L3MON4D3/LuaSnip" },
-	{ "VonHeikemen/lsp-zero.nvim", branch = "v4.x" },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/nvim-cmp" },
 	{
@@ -76,7 +75,6 @@ return {
 		priority = 1000,
 		opts = {},
 	},
-	{ "rose-pine/neovim", name = "rose-pine" },
 	{
 		"mikesmithgh/kitty-scrollback.nvim",
 		enabled = true,

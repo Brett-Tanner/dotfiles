@@ -21,8 +21,6 @@ function Select_random_colorscheme()
 		"dracula-soft",
 		"kanagawa-dragon",
 		"kanagawa-wave",
-		"rose-pine-main",
-		"rose-pine-moon",
 		"tokyonight-night",
 		"tokyonight-moon",
 	}
