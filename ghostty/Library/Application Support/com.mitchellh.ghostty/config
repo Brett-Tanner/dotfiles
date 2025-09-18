@@ -12,3 +12,4 @@ window-padding-color = extend
 window-padding-x = 0
 window-padding-y = 0
 working-directory = /Users/brett/repos
+auto-update = check
