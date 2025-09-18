@@ -8,6 +8,8 @@ if status is-interactive
 	set -gx PATH "/opt/homebrew/opt/libpq/bin:$PATH"
 	set -gx PATH "/opt/homebrew/opt/postgresql@16/bin:$PATH"
 	set -gx PATH "/Users/brett/.local/share/nvm/v24.6.0/bin:$PATH"
+	set -gx PATH "$HOME/.rbenv/bin:$PATH"
+	set -gx PATH "$HOME/.rbenv/shims:$PATH"
 
 	set -gx DATABASE_PASSWORD "postgrespass"
 	set -gx EDITOR nvim
