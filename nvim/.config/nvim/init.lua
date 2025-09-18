@@ -22,7 +22,6 @@ function Select_random_colorscheme()
 		"kanagawa-dragon",
 		"kanagawa-wave",
 		"rose-pine-main",
-		"rose-pine-dawn",
 		"rose-pine-moon",
 		"tokyonight-night",
 		"tokyonight-moon",

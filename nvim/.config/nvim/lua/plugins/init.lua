@@ -23,8 +23,14 @@ return {
 	{ "neovim/nvim-lspconfig" },
 	{ "nvim-telescope/telescope.nvim" },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	{ "williamboman/mason-lspconfig.nvim" },
-	{ "williamboman/mason.nvim" },
+	{
+		"mason-org/mason-lspconfig.nvim",
+		opts = {},
+		dependencies = {
+			{ "mason-org/mason.nvim", opts = {} },
+			"neovim/nvim-lspconfig",
+		},
+	},
 	{
 		"nvim-neotest/neotest",
 		dependencies = {
