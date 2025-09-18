@@ -13,6 +13,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "<filetype>" },
+	callback = function()
+		vim.treesitter.start()
+	end,
+})
+
 -- Color scheme
 function Select_random_colorscheme()
 	local colorschemes = {

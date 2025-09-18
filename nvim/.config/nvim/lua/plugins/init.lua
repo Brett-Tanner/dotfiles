@@ -1,9 +1,9 @@
 return {
+	{ "nvim-treesitter/nvim-treesitter", lazy = false, branch = "main", build = ":TSUpdate" },
 	"hrsh7th/cmp-buffer",
 	"nvim-lua/plenary.nvim",
 	"nvim-telescope/telescope-fzf-native.nvim",
 	"nvim-tree/nvim-web-devicons",
-	"nvim-treesitter/nvim-treesitter-textobjects",
 	"nvimtools/none-ls.nvim",
 	"rebelot/kanagawa.nvim",
 	"tpope/vim-fugitive",
@@ -21,7 +21,6 @@ return {
 	},
 	{ "neovim/nvim-lspconfig" },
 	{ "nvim-telescope/telescope.nvim" },
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {},
